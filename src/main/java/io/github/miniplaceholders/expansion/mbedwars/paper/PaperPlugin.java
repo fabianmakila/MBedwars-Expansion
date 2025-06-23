@@ -25,7 +25,7 @@ public final class PaperPlugin extends JavaPlugin {
 			if (apiVersion < supportedAPIVersion)
 				throw new IllegalStateException();
 		} catch (Exception e) {
-			getLogger().warning("Sorry, your installed version of MBedwars is not supported. Please install at least v" + supportedVersionName);
+			getSLF4JLogger().warn("Sorry, your installed version of MBedwars is not supported. Please install at least v" + supportedVersionName);
 			Bukkit.getPluginManager().disablePlugin(this);
 			return;
 		}
