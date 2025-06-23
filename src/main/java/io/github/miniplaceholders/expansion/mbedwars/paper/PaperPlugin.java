@@ -36,8 +36,10 @@ public final class PaperPlugin extends JavaPlugin {
 				.globalPlaceholder("arena_displayname", new ArenaDisplayNamePlaceholder())
 				.globalPlaceholder("arena_maxplayers", new ArenaMaxPlayersPlaceholder())
 				.globalPlaceholder("arena_minplayers", new ArenaMinPlayersPlaceholder())
-				.globalPlaceholder("arena_playercount", new ArenaPlayerCountPlaceholder())
 				.globalPlaceholder("arena_players", new ArenaPlayersPlaceholder())
+				.globalPlaceholder("arena_status", new ArenaStatusPlaceholder())
+				.globalPlaceholder("arena_teams", new ArenaTeamsPlaceholder())
+				.globalPlaceholder("arena_teamsize", new ArenaTeamSizePlaceholder())
 				.build();
 
 		BedwarsAPI.onReady(() -> this.expansion.register());

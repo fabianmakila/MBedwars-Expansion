@@ -36,7 +36,7 @@ tasks {
 }
 
 paperPluginYaml {
-    main = "io.github.miniplaceholders.expansion.libsdisguises.paper.PaperPlugin"
+    main = "io.github.miniplaceholders.expansion.mbedwars.paper.PaperPlugin"
     apiVersion = "1.21"
     authors.add("FabianAdrian")
     foliaSupported = true
