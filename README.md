@@ -1,2 +1,2 @@
-# Example-Expansion
-Example Expansion for MiniPlaceholders
+# MBedwars-Expansion
+MBedwars Expansion for MiniPlaceholders
