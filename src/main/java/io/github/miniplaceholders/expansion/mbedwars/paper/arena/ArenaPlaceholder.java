@@ -2,16 +2,14 @@ package io.github.miniplaceholders.expansion.mbedwars.paper.arena;
 
 import de.marcely.bedwars.api.BedwarsAPI;
 import de.marcely.bedwars.api.arena.Arena;
+import io.github.miniplaceholders.expansion.mbedwars.paper.Placeholder;
 import net.kyori.adventure.text.minimessage.Context;
 import net.kyori.adventure.text.minimessage.tag.Tag;
 import net.kyori.adventure.text.minimessage.tag.resolver.ArgumentQueue;
-import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 
 import java.util.function.BiFunction;
 
-public abstract class ArenaPlaceholder implements BiFunction<ArgumentQueue, Context, Tag> {
-	protected static final LegacyComponentSerializer LEGACY_COMPONENT_SERIALIZER = LegacyComponentSerializer.legacyAmpersand();
-
+public abstract class ArenaPlaceholder extends Placeholder implements BiFunction<ArgumentQueue, Context, Tag> {
 	@Override
 	public Tag apply(ArgumentQueue queue, Context context) {
 		if (!queue.hasNext()) {
