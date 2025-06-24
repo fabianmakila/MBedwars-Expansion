@@ -34,6 +34,6 @@ public final class PlayerArenaTeamColorPlaceholder extends Placeholder implement
 			return Tag.styling();
 		}
 
-		return Tag.styling(builder -> builder.color(TextColor.color(team.getBukkitColor().asRGB())));
+		return Tag.styling(builder -> builder.color(TextColor.color(team.getBungeeChatColor().getColor().getRGB())));
 	}
 }
