@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 
 public final class PlayerArenaStatusPlaceholder extends PlayerArenaPlaceholder {
 	@Override
-	protected Tag resolve(Player player, Arena arena, ArgumentQueue queue, Context context) {
+	protected Tag playerArenaTag(Player player, Arena arena, ArgumentQueue queue, Context context) {
 		ArenaStatus status = arena.getStatus();
 		if (status == null) {
 			return Tag.preProcessParsed("Unknown status");

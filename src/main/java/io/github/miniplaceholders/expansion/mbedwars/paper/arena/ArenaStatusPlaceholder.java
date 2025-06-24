@@ -9,7 +9,7 @@ import net.kyori.adventure.text.minimessage.tag.resolver.ArgumentQueue;
 
 public final class ArenaStatusPlaceholder extends ArenaPlaceholder {
 	@Override
-	protected Tag resolve(Arena arena, ArgumentQueue queue, Context context) {
+	protected Tag arenaTag(Arena arena, ArgumentQueue queue, Context context) {
 		ArenaStatus status = arena.getStatus();
 		if (status == null) {
 			return Tag.preProcessParsed("Unknown status");

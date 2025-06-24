@@ -6,9 +6,10 @@ import net.kyori.adventure.text.minimessage.tag.Tag;
 import net.kyori.adventure.text.minimessage.tag.resolver.ArgumentQueue;
 import org.bukkit.entity.Player;
 
-public final class PlayerArenaNamePlaceholder extends PlayerArenaPlaceholder {
+//TODO Display the time in hh:ss format
+public final class PlayerArenaRunningTimePlaceholder extends PlayerArenaPlaceholder {
 	@Override
 	protected Tag playerArenaTag(Player player, Arena arena, ArgumentQueue queue, Context context) {
-		return Tag.preProcessParsed(arena.getName());
+		return Tag.preProcessParsed(String.valueOf(arena.getRunningTime()));
 	}
 }

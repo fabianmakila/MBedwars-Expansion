@@ -27,8 +27,8 @@ public abstract class PlayerArenaPlaceholder implements AudiencePlaceholder {
 			return Tag.selfClosingInserting(deserialized);
 		}
 
-		return resolve(player, arena, queue, context);
+		return playerArenaTag(player, arena, queue, context);
 	}
 
-	protected abstract Tag resolve(Player player, Arena arena, ArgumentQueue queue, Context context);
+	protected abstract Tag playerArenaTag(Player player, Arena arena, ArgumentQueue queue, Context context);
 }

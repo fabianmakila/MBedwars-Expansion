@@ -7,7 +7,7 @@ import net.kyori.adventure.text.minimessage.tag.resolver.ArgumentQueue;
 
 public final class ArenaTeamSizePlaceholder extends ArenaPlaceholder {
 	@Override
-	protected Tag resolve(Arena arena, ArgumentQueue queue, Context context) {
+	protected Tag arenaTag(Arena arena, ArgumentQueue queue, Context context) {
 		return Tag.preProcessParsed(String.valueOf(arena.getPlayersPerTeam()));
 	}
 }

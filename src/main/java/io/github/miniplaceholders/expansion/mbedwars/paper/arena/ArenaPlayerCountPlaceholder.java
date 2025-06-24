@@ -8,9 +8,9 @@ import org.bukkit.entity.Player;
 
 import java.util.Collection;
 
-public final class ArenaPlayersPlaceholder extends ArenaPlaceholder {
+public final class ArenaPlayerCountPlaceholder extends ArenaPlaceholder {
 	@Override
-	protected Tag resolve(Arena arena, ArgumentQueue queue, Context context) {
+	protected Tag arenaTag(Arena arena, ArgumentQueue queue, Context context) {
 		Collection<Player> players = arena.getPlayers();
 		if (players == null) {
 			return Tag.preProcessParsed("0");

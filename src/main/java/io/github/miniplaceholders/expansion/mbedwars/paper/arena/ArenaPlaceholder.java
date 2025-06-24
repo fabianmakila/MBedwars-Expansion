@@ -25,8 +25,8 @@ public abstract class ArenaPlaceholder implements BiFunction<ArgumentQueue, Cont
 			return Tag.preProcessParsed("Unknown arena");
 		}
 
-		return resolve(arena, queue, context);
+		return arenaTag(arena, queue, context);
 	}
 
-	protected abstract Tag resolve(Arena arena, ArgumentQueue queue, Context context);
+	protected abstract Tag arenaTag(Arena arena, ArgumentQueue queue, Context context);
 }

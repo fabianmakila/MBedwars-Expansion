@@ -7,7 +7,7 @@ import net.kyori.adventure.text.minimessage.tag.resolver.ArgumentQueue;
 
 public final class ArenaAuthorsPlaceholder extends ArenaPlaceholder {
 	@Override
-	protected Tag resolve(Arena arena, ArgumentQueue queue, Context context) {
+	protected Tag arenaTag(Arena arena, ArgumentQueue queue, Context context) {
 		String[] authors = arena.getAuthors();
 		if (authors == null || authors.length < 1) {
 			return Tag.preProcessParsed("Unknown author");

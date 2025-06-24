@@ -8,7 +8,7 @@ import org.bukkit.entity.Player;
 
 public final class PlayerArenaAuthorsPlaceholder extends PlayerArenaPlaceholder {
 	@Override
-	protected Tag resolve(Player player, Arena arena, ArgumentQueue queue, Context context) {
+	protected Tag playerArenaTag(Player player, Arena arena, ArgumentQueue queue, Context context) {
 		String[] authors = arena.getAuthors();
 		if (authors == null || authors.length < 1) {
 			return Tag.preProcessParsed("Unknown author");
