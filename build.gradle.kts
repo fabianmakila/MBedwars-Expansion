@@ -10,9 +10,9 @@ description = "MBedwars Expansion for MiniPlaceholders"
 version = "1.0.0-SNAPSHOT"
 
 dependencies {
-    compileOnly("io.github.miniplaceholders:miniplaceholders-api:2.3.0")
+    compileOnly("io.github.miniplaceholders:miniplaceholders-api:3.1.0")
     compileOnly("io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT")
-    compileOnly("de.marcely.bedwars:API:5.5.3")
+    compileOnly("de.marcely.bedwars:API:5.5.5")
 }
 
 repositories {
@@ -28,9 +28,9 @@ tasks {
         options.encoding = Charsets.UTF_8.name()
     }
     runServer {
-        minecraftVersion("1.21.4")
+        minecraftVersion("1.21.10")
         downloadPlugins {
-            modrinth("miniplaceholders", "wck4v0R0")
+            modrinth("miniplaceholders", "4zOT6txC")
         }
     }
 }

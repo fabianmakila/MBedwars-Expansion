@@ -2,16 +2,16 @@ package io.github.miniplaceholders.expansion.mbedwars.paper.arena;
 
 import de.marcely.bedwars.api.BedwarsAPI;
 import de.marcely.bedwars.api.arena.Arena;
+import io.github.miniplaceholders.api.resolver.GlobalTagResolver;
 import io.github.miniplaceholders.expansion.mbedwars.paper.Placeholder;
 import net.kyori.adventure.text.minimessage.Context;
 import net.kyori.adventure.text.minimessage.tag.Tag;
 import net.kyori.adventure.text.minimessage.tag.resolver.ArgumentQueue;
+import org.jetbrains.annotations.NotNull;
 
-import java.util.function.BiFunction;
-
-public abstract class ArenaPlaceholder extends Placeholder implements BiFunction<ArgumentQueue, Context, Tag> {
+public abstract class ArenaPlaceholder extends Placeholder implements GlobalTagResolver {
 	@Override
-	public Tag apply(ArgumentQueue queue, Context context) {
+	public Tag tag(ArgumentQueue queue, @NotNull Context context) {
 		if (!queue.hasNext()) {
 			return Tag.preProcessParsed("You need to provide arena name");
 		}
